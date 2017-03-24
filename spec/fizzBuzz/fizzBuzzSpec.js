@@ -4,5 +4,17 @@ describe('FizzBuzz',function(){
         var result = fizzBuzz.putString(4);
         expect(result).toEqual('4');
     })
+    it('number to Fizz',function(){
+        var result = fizzBuzz.putString(3);
+        expect(result).toEqual('Fizz');
+    })
+    it('number to Buzz',function(){
+        var result = fizzBuzz.putString(5);
+        expect(result).toEqual('Buzz');
+    })
+    it('number to FizzBuzz',function(){
+        var result = fizzBuzz.putString(15);
+        expect(result).toEqual('FizzBuzz');
+    })
 
 })
