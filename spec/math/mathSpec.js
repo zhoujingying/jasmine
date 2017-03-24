@@ -13,4 +13,19 @@ describe('math',function(){
         var substraction = math.minus(3,2);
         expect(substraction).toEqual(1);
     })
+
+    it('should return a string',function(){
+        
+        var result = math.putString(4);
+        expect(result).toEqual('4');
+    })
+})
+
+describe('FizzBuzz',function(){
+    var fizzBuzz = require('../../lib/fizzBuzz/fizzBuzz.js');
+    it('number to string',function(){
+        var result = fizzBuzz.putString(4);
+        expect(result).toEqual('4');
+    })
+
 })
