@@ -19,5 +19,17 @@ describe('analyze a text file to get correct result',function(){
             ]
         )
     })
+
+    it('should return a array which form big to small sort',function(){
+        expect(analyzeFile.sortArr([{name:'sky',number:1},{name:'forest',number:3},{name:'sunshine',number:2}])).toEqual(
+            [
+                {name:'forest',
+                number:3},
+                {name:'sunshine',
+                number:2},
+                {name:'sky',
+                number:1}
+            ])
+    })
     
 })
