@@ -5,8 +5,8 @@ describe('FizzBuzz',function(){
         expect(result).toEqual('4');
     })
     it('number to Fizz',function(){
-        var result = fizzBuzz.putString(3);
-        expect(result).toEqual('Fizz');
+        
+        expect(fizzBuzz.putString(3)).toEqual('Fizz');
     })
     it('number to Buzz',function(){
         var result = fizzBuzz.putString(5);
