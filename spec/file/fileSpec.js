@@ -2,15 +2,22 @@ describe('analyze a text file to get correct result',function(){
     var analyzeFile = require('../../lib/file/file.js');
     
     it('should return a string',function(){
-        expect(analyzeFile.ToArray('sky forest sunshine wind forest forest sunshine')).toEqual(
-            ['sky','forest','sunshine','wind','forest','forest','sunshine']
+        expect(analyzeFile.ToArray('sky forest sunshine forest forest sunshine')).toEqual(
+            ['sky','forest','sunshine','forest','forest','sunshine']
         );
     })
 
-    // it('should return an array',function(){
-    //     expect(analyzeFile.toArray()).toEqual(
-    //         
-    //     )
-    // })
+    it('should return an another array consist of some object which have name and number',function(){
+        expect(analyzeFile.toArrayWithObj(['sky','forest','sunshine','forest','forest','sunshine'])).toEqual(
+            [
+                {name:'sky',
+                number:1},
+                {name:'forest',
+                number:3},
+                {name:'sunshine',
+                number:2}
+            ]
+        )
+    })
     
 })
